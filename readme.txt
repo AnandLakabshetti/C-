@@ -149,6 +149,49 @@ that means whenever c++ complier comes across the inline functin call it substit
 
 
 
+Diff bet inline function and macro
+
+
+new operator and delet:
+
+new operator is used same as malloc in c
+u
+syntax of new :
+int *ptr = new int 
+int *ptr = new int [5]
+
+syntax of delet:
+delet ptr;
+delet []ptr;
+
+
+
+
+typecasting is not required in new operator 
+
+Class and object :
+
+Class:	it is nothing but it is a advance structure 
+Object :object is nothing but it is a instance of a class 
+
+stucture is collection of different data types in contigeous memory  location.
+
+whenever the object is created then memory is allocated only for the data members .
+
+
+
+class st{
+
+int a;
+char c;
+
+void fun ()
+{
+
+}
+//here fun is member function and (a,b) are the data members .
+
+}
 
 
 
