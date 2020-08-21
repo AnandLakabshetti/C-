@@ -195,5 +195,29 @@ void fun ()
 
 
 
+empty structure size is 0 byte in c and 1 byte in c++;
+
+
+c++ structure allow the fucntion declaration inside the structure [encapuslation ]which not possible in c.
+
+in c++ strucures the by default the members are public and in class it is private
+
+by default the c++ structure takes a public inheritance and class has private inheritance
+
+
+
+3 Access permissions are there in c++
+@
+it is also called as visibility mode
+
+1.public 
+2.private 
+3.protected 
+
+
+
+
+
+
 
 
