@@ -9,7 +9,7 @@ class st
 int main ()
 {
 	class st a;
-	a.x=10;
+	a.x=10;  //default class member will be private 
 	cout << a.x<<endl;
 
 
