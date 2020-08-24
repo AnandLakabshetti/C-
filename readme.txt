@@ -192,7 +192,7 @@ void fun ()
 //here fun is member function and (a,b) are the data members .
 
 }
-
+yo
 
 
 empty structure size is 0 byte in c and 1 byte in c++;
@@ -215,6 +215,48 @@ it is also called as visibility mode
 3.protected 
 
 
+
+
+
+Friend function:
+	it is a non member of the class which is used to access the private data members of the class .
+
+
+syntax :
+	friend return_type function_name  (classname &, ---)
+
+a non member function can be a friend function of the class.
+
+This pointer :
+
+/* In member function */
+obj.setdata (10,20)
+
+void setdata (int a, int b)
+{
+x=a, y=b; // ---> internally obj.x=a, obj.y=b;
+}
+
+/* In non-member function */
+obj.setdata(obj1, int a,int b)
+{
+obj1.x=x,obj1.y=y;
+}
+
+
+This pointer conecpt is not there in a non member function , we have to pass the object as an explicit parameter.
+
+
+C++ provides a unique pointer called this pointer .the pointer called this points to object itself.whenever a member
+function is called , this is automatically passed to the called member function as an implicit in built argument.
+
+
+charactaristic of this pointer:
+
+Need to learn;
+
+
+ 
 
 
 
