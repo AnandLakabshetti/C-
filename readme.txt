@@ -257,8 +257,249 @@ Need to learn;
 
 
  
+In a class both can be declared as static i.e data member and member function .
 
 
+Static data  member:
+	it is like global variable for its class, it can be accessed by all object of the class.
+
+default value of static value is 0.
+just one copy of the data member is created and it is shared across the objects;
+
+
+a static data member must be declared within a class .
+and defined outside the class by type and scope of the static member variable.
+
+
+
+1.Static member function are same as a normal function .
+
+
+2.A static member function can access the only static members of the class (variable or  function )
+3.static member function can be involved by using the class name (instead of its object ) as follow:
+
+
+
+class_name::function name;
+
+static member function dont have an implicit "this " pointer as the first parameter.
+
+
+Advantages of static member function :
+1.the static function can be used to count the no of instances of a class and can be returned the value 
+of static variable using static member function .
+2.the static function can be called without creating the objecti.e class name :: function name;
+this is useful to define the constructors in private sections.
+ihi
+
+
+
+member function :
+	1.access data 
+	2.modify the data 
+
+
+C++ provider special mechanism of initialize an object during its creation and and destroy the object 
+when it is no more needed using special member functions known as constructors and destructors.
+
+
+
+A constructor is a special member function which gets called/involked automatically when an object gets 
+created of same class , object is automatically initialized by the constructor .
+
+
+
+member function:
+return type classname :: function name (argc,--);
+
+constructor :
+class_name :: (classname )(argc,--)
+
+
+in contructor there is no return tupe.vi.e like void , int ,char *
+
+No function name .
+
+
+
+Class A {
+int x,y;
+public :
+A()
+{
+x=10,y=20;
+}
+main ()
+{
+A obj;
+}
+}  
+
+
+constructors are used to initialize the class members.
+whenever obj is created out of class then constructor must be in public mode.
+
+
+properties of contructors :
+1.constructors has the same name as class to which it belongs .
+2.it does not have return type i.e even void 
+3.it must be declared in public mode , if objects are ceating outside the class.
+4.Address of the constructor cannot be refered .
+
+5.constructor can have default argument.
+6.contructor can be overloaded .
+
+7.contructor can not be virtual.
+8.contructor can be inherited although a derived class can call the base class contructor.
+
+
+
+**why contructor can not have return type and have parameter.
+
+--basically contructor are called when a object created  and there can never exits a situvation where 	we want
+to return a value at a time of creation of an object .but there are situvation when the data members of the dofferent onjects must 
+be initialized with different value at the time of creation , so C++ allow a passing an argument to constructor .
+
+
+
+**4 Default member function of the class:
+
+1.default contructor 
+2.copy condtructor 
+3.destructor
+4.Assignment operator overloaded function 
+
+
+Constructor types :
+1.Default contructors 
+2.parameterised constructor 
+3.copy constructors 
+4.dynamic contructors 
+
+
+1.default contructor :
+	A constructor which does not accept any parameter is called as default contructor.
+
+When constructor is not explicitely declare in class , a default constructor is added and involked during 
+object 	initialization by the compiler .
+syntax: classname ::classname ();
+
+2.
+A contructor with one or more argument is known as parameterised contructor.
+
+syntax:
+	classname :: classname (arg,--);
+
+
+Default contructor is ignored by the compiler if any contructor explicitely present into the class.
+
+3.Copy constructor :
+copy constructor is special type of contructor used to make the copy of one class object and initialization 
+it done by using another object of the same class.
+
+copy contructor takes the single argument which is reference to another object of the same class.
+
+
+A default copy constructor is ignored when the explicit copy contructor provided in the class.
+
+Explicit copy contructor is not provided then implicit copy constructor is provided .
+
+
+
+without & A (A & ob) -->so recursively call the function .
+
+Error : Invalid contructor you probably meant  'A (const &A)'
+
+
+constructor involked only once in to a object.
+
+
+copy constructor cases 
+Case1.
+
+A obj;
+A obj1=obj; ---> initialization 
+obj1=obj;--> Assignment operator overloading function 
+
+
+
+Shallow copy :
+it is called as member wise copy.
+
+it is a type of copy in which the data member of an object  or copy into one object use 
+to default constructor.
+
+Note : shallow copy is not suitable for copying objects containing dynamically allocated pointers.
+to overcome this problem we use the another type of copy called as deep copy.
+
+
+
+
+
+Deep coopy:
+	if data member of one object or copy into the another object using explicit copy contructor then it is called deep copy
+
+
+deep copy copies what  object pointer members to pointing another object by allocating a separate memory.
+
+
+
+Dynamic contructor :
+	if a contructor involked to to dynamically created object that is called as dynamic contructor .
+
+
+         A *ptr =new A;///dynamically allocate the memory 
+     
+        ptr->print ();
+
+        ptr = new A (222,333);
+
+        ptr->print ();
+
+ 
+
+Destructors :
+	it is a special member function of the class which is invloked whenever the scope of the object 
+is going to object completed (destroyed ).
+
+
+it is used to avoid the memory leak;
+
+void fun ()
+{
+A obj:///
+}
+
+syntax  ~classname (void);
+
+
+~ constructor means the destructors  ~ A()
+
+
+destructor is the only function which never accepts the arguments .
+
+main function of the destructor is to avoid the dynamic memory leakage .
+
+
+const object must be initialized with constructor .
+
+const object must be accessed with constant  member function only .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
