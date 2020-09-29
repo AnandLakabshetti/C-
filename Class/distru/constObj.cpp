@@ -3,7 +3,7 @@ using namespace std;
 
 class A {
 	public :
-		int x,y;
+	const 	int x,y;
 	public :
 		A():x(1),y(2)
 		{
@@ -15,14 +15,14 @@ class A {
 			cout << "default destructor \n"<<endl;
 		}
 
-		void print () const 
+		void print () const //const object must be accessed with const member function 
 		{
 		cout << "in print " << x<< " "<<y<<endl;
 		}
 };
 int main ()
 {
-	const A a;
+	 const A a;
 	a.print();
 
 }

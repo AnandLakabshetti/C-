@@ -487,6 +487,157 @@ const object must be accessed with constant  member function only .
 
 
 
+Data security (static function )
+ 	
+using static functioin we can provide data security .put data and constructor and destructor in private 
+then put use static function for variable/object creation 
+
+** operator overloading **
+
+1.user defined 
+
+only assignment operator we can use in the use defined function , other are not work in user defined function .
+
+
+
+struct st v1,v2,v3; -->valid 
+v3=v1+v2---> invalid
+
+no function to do v1 and v2 addition .
+
+to to addition  if we create a new funtion then that is called as funtion overloading 
+
+**Existing meaning**
+it is already performed on the predefiend data variable.
+
+** special meaning **
+it has to work on user defined data type variable.
+
+
+the facility of giving an special meaning to an operator without changing the its existing meaning is 
+refered as operator overlaoding .
+
+
+An operator can be overloaded by creating a special function called operator function , which describes the task.
+
+
+
+//If it is member funtion //
+
+return_type  classname :: operator op (arg---)
+{
+statements;
+}
+
+//AS a friend function //
+return tupe operataoar op (arg &, --)
+
+
+
+
+List of operators that can be overloaded in c++;
+
+	+    -    *    /      %        ^
+&    |    ~    !,        =
+    =      ++        --
+    ==    !=      &&        ||
++=    -=    /=    %=      ^=        &=
+|=    *=    =      []        ()
+->    ->*    new    new []      delete    delete []
+
+
+
+List of operators that cannot be overloaded
+
+
+1> Scope Resolution Operator  (::)    
+2> Pointer-to-member Operator (.*)    
+3> Member Access or Dot operator  (.)    
+4> Ternary or Conditional Operator (?:) 
+5> Object size Operator   (sizeof) 
+6> Object type Operator   (typeid) 
+
+
+Overload the operators only through the member function .
+
+there are the operator which cannot be overlaoded using member function .
+
+friend function cannot be overloaded using following operators .
+
+1.= (Assignment)
+2.() [Funtion call]
+3. [] (subscripting )
+4.-> (arrow)
+
+
+
+
+
+Type conversion:
+
+1.explicit 
+2.implicit 
+
+C++ supoorts conversion of one type of data type to another involving user defined data type and can be done using 
+constructor and type conversion function .
+
+
+int, char , double , float are the primitive data type.
+class/structure are the  non-primitive data types
+
+
+conversion  from one primitive type to another primitive type no need to typecast i.e it will be automatically converted 
+
+if try same with primitive to no primitive (class) then we will get an error.
+
+class complex c1;
+int x=5;
+c1=x; ///error 
+
+
+1.Coversion from basic (primitive)type to class type :
+	e.g -> Var1=x;'
+	using constructor 
+
+
+2.Coversion from  class type to basic type  :
+	e.g -> x=var1;
+	using casting operator 
+
+3.Coversion from  one class type to another class type  :
+	e.g -> Var2=var1;
+	1.using constructor 
+	2.using casting operator 
+
+
+
+
+struct st var1;
+struct st var2 ;
+int x;
+
+1.var1=x;
+2.x=var1;
+3.var2=var1;
+
+
+
+Target[Constructor] = source [Type conversion ]
+
+
+
+when there is no constructor then compiler will create a constructor (default constructor )
+
+if we create the constructor (any type ) then compliler will take that constructor 
+
+
+
+
+
+
+
+
+
 
 
 
