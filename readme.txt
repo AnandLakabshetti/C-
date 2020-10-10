@@ -633,6 +633,365 @@ if we create the constructor (any type ) then compliler will take that construct
 
 
 
+Inheritance:
+Car :
+car will have different properties i.e price , engine , fuel type ,color 
+		methods :->setprice() , setfueltype (), setenginetype(), setcolor()
+
+
+so whenever we try to create an sportcar class then we will derive the properties from the car class 
+because as sports car will have some properties/function same as car and some additional properties as well.
+
+
+there is accessibility and availability difference is there 
+
+Access specifiars 
+1.private 
+2.protected 
+3.public
+
+
+two users :
+1.user1 will create an object type of your class
+2.user2 will derived class from your class
+
+
+here private and protected member functions/function will be available to both the users but 
+those accessiblity will be depends on their access specifiers .
+
+As private data members are available to both users but not accessble to both the users dorectly.
+
+and public data members will be available and accessable to both users directly.
+
+
+
+If A is class and B is class but derived from A as private 
+
+class A{
+}
+Class b :private A
+{
+}
+
+then B can access the public and protected data members not private data members of A 
+so here both the users in class B cant access the protected and public members of class as it is private within class B
+
+
+
+
+Is a relationship:
+Association between two classes 
+	i)Aggregation
+	ii)composition 
+	iii)inheriatance
+
+if there 'is a' relation is there there , then there will be inheritance.
+
+
+Banana(child class) is a fruit(parent class) 
+rectangle(child class) is a quadrilateral (parent class) 
+
+is a relation always implemented as public inheritance.
+
+
+
+
+
+
+Function overiding:
+	it is mechanism of providing same function in both base class and derived class is called as function overriding.
+
+program is written there in c++ folder for this function override
+
+
+compiler will create an variable for class where atleast one function is virtual function , we can verify this using size of both parent and child class.
+virtual function :
+	virtual function is a function which is present in basa class and may be overrided in derived class and which inform
+to compiler to perform the run time polymorphism.
+
+**Virtual functions must be overrided in a derived class ->false.
+
+virtual pointer is always base class type.
+vptr is placed in object.
+
+
+Base class pointer can point to the object of the derived class i.e descendent class but derived class pointer can not point to  base class object .
+
+
+when fun call happening with object then object type will be considered by compiler and when fun call happening with pointer then 
+pointer type will be considered.
+
+
+And compiler will create an static array (only once ) which a array of pointer (function pointer) [it is array of function pointer called as V V table ]as we know without declaring variable object also static variable will get memory.
+
+in which class virtual function are there , V table will be available for that class.
+
+virtual pointer contains the V table address i.e static array address which will be inheriated in child class.
+
+Method overriding:
+
+class A {
+
+fun () {}
+fun1 () {}
+};
+class B:public A
+{
+fun() {}///function overriding 
+fun1(int ) {} //function Hiding
+}
+int main  the()
+{
+B b;
+b.fun() ///it gooes to B
+b.fun1() //it goes to B but as fun1 in B takes an argument it thows an error 
+	///compiler will check the function name in class B it present in class B then it will not check function in parent class otherwise it will go to parent class and search the function
+b.fun1(4); ///B it works fine 
+
+
+Difference between function overloading and overriding :
+
+overloading : in same class same function is present but they differ in arguments 
+overriding : two class same function same arguments  name in both classes.
+method hiding :two class same function but different arguments .
+
+}
+
+when in inheritance we want to change the functionality which are inherited from parent if we want to change then we will 
+go for the function overriding by keeping the same name in child class.
+
+in this example the fun () will get overrided and fun1 will act as function hiding as they differ in arguments in respective class.
+
+
+
+/* A virtual function which declared but not defined in base class is refered as pure virtual function */
+  
+/* if class contains atleast one pure virtual function then class said to be abstract type*/
+/* if pure virtual function is declared in base class then it must be overrided in derived class otherwise derived class becomes abstract type class  */
+
+
+
+Templates :
+1.source code size is less.
+2.reduces the user efforts 
+3.debugging is easy
+4.Good documemtability
+5.Less disk space needed to store source files 
+
+-Templates are a new features of the programming language that allows functions and classes to operate with generic types.
+-This allows function or class to work on many different data types 
+-it overcomes the disadvantages of function overloading 
+
+
+Templates->1.Function tempates 
+	   2.Class Templates
+
+
+function templates :
+which allows the programmer to write a generic function.
+
+
+RTTI ->run time type identification.
+
+overloading of function templates is possible .
+
+
+Template is a keyword by using this we can create the function template and class templates 
+
+it is a way to make your function or class generalize as for as data type concerns.
+
+
+
+Exception handling :
+
+Exception is an event which occurs during run time and interupts the normal flow of excecution.
+
+to handle such kind of exception we are using mechanism which uses 3 keywords 
+1.Try
+2.Throw
+3.Catch
+A catch block will handle the exception condition which is sent by throw.
+
+Try{                       ///testing code 
+throw exception--
+---
+}
+
+catch (data_type argument)
+{
+
+----
+---Instruction to handle the exception 
+---
+}
+
+Purpose of Exception handling :
+
+The basic purpose of exception handling is to maintain the normal flow of the application irrespective of errors/exceptions which might occur during execution. If proper exception handling is not implemented then the application flow will be disrupted.
+
+
+
+Exception handling not only thowing error kind messages but also used to return different type results from the function.
+
+
+using exception we can return the value from constructor.
+	please check the examples for better understanding 
+
+
+Some situation where try blocks may produce various types of exception.
+can write catch block which can handle all type of exception.
+multiple catch blocks are possible but multiple throw not possible.
+
+
+terminator :
+	A terminate handler function is a function automatically called when exception handling process has bo be left for some reason .
+
+
+throwing an unhandled exception causes standard library function then terminate to be invloked.
+
+
+File Handling in C++:
+
+if some variable is present in program then it will be exist still it is under execution because we will be performing some operation, to store it permanently in HDD (in variable data will not be stored permanently) we use files which will help in future.
+basic example is bank system .
+
+In HDD data is stored in form of file.
+
+Streams:
+	input and output stream.
+
+	In C++ predefined class is there for input and output operations on file.
+	input and output stream objects we can create.
+	include <fstream.h>
+
+	fstream,ifstream,ofstream are the classes by using these class object we can perform the file read,write operations.
+
+
+	cin and cout are declared in iostream header file.
+
+	">> " (extraction operator) this operator consideres the space as an delimeter/special character 
+	to avoid such things use fin.get() which returns the character .
+
+	please go thorough the examples as well for better understanding
+
+
+	File opening modes in C++;
+	
+	ios::in -->input/read
+	ios::out --> output/write --> truncate the previous data  
+	ios::app ->append 
+	ios::ate-->update --> if u r performing random operation 
+	
+	fout.open ('filename') --> means bringing the file from HDD to RAM
+	fout.open ('filename',file_open_mode) 
+	by default the file will be opened in text mode.
+
+
+	fout << "my name is \n Anand ";
+	if u open the file in binary mode then above line will be printed as it is with \n
+	but of u open the file in text mode then Anand will be written in next  line i.e meaning of \n will be considered .
+
+
+ 
+       
+
+
+
+	to write a data in file 
+	
+	ofstream fout;//create an stream for output 
+	fout.open ("data.txt");
+        fout<<"hello\n";
+        fout.close ();
+	
+	To read from the file 
+
+	 ifstream fin;//create an stream for input
+	fin.open ("data.txt");  //attach the input object with file for operation 
+        fin>>word;
+        /*now here the fin is associate with file and cin is associated with keyboard*/
+        cout << word<<endl;
+	** here word is string */
+
+	To write a class data into file 
+	
+    int book ::storebook ()
+{
+        if (price == 0){
+                cout << "price is not defined \n"<<endl;
+                return 0;
+        }
+        else {
+                ofstream fout;
+                fout.open ("file.dat",ios::app);
+                fout.write((char *)this ,sizeof (*this));
+
+                fout.close ();
+        }
+}
+
+
+To read a object data from a file 
+
+                void readclassfile()
+                {
+                        ifstream fin;
+                        fin.open ("file.dat",ios::in|ios::binary);
+                        if (!fin)
+                        {
+                                cout <<" file not found \n"<<endl;
+                        }
+                        else{
+                                fin.read((char *)this , sizeof (*this));
+                                while (!fin.eof ()) {
+                                        fin.read((char *)this , sizeof (*this));
+                                        showdata ();
+                                }
+                        }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
