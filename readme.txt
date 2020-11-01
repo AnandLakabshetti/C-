@@ -7,7 +7,7 @@ Bool improves the code redability.
 
 String :  
 it is new data type in a C++;
-string lenght can be changed run time, by this we can overcome the problem of malloc and realloc.
+string length can be changed run time, by this we can overcome the problem of malloc and realloc.
 
 S="Hello"
 cout << s;
@@ -26,16 +26,11 @@ Structure is a user defined datatype .
 class string {
 
 char * str;
-some functio operations;
+some function operations;
 }
 
-
-
-
-        //cin >> s; it will not acuscept words after the space 
+        //cin >> s; it will not accept words after the space 
         getline (cin,s); ///for taking the string with space
-
-
 
 Namespaces :
 Mechanism for logically grouping declarations and definations into common declarative region 
@@ -90,7 +85,7 @@ functons cant be overloaded just because of return data type.
 function overloading follow the Name mangling concept.
 
 	name mangling is concept used in c++ wher compiler changes the names of the every function by adding additional
-information based on fucntion name and its arguments.
+information based on function name and its arguments.
 
 
 
@@ -106,7 +101,7 @@ for that parameter the default value is used .if user does supply the a value fo
 
 
 Rules for the default parameter :
-	1.a fucnton can have multiple default parameter .
+	1.a function can have multiple default parameter .
 	2.all default parameter must be right most parameter in argument
 `	3.default parameter must be given at the time of prototype and must not be repeatedin function defination .
 
@@ -155,7 +150,7 @@ Diff bet inline function and macro
 new operator and delet:
 
 new operator is used same as malloc in c
-u
+
 syntax of new :
 int *ptr = new int 
 int *ptr = new int [5]
@@ -192,7 +187,6 @@ void fun ()
 //here fun is member function and (a,b) are the data members .
 
 }
-yo
 
 
 empty structure size is 0 byte in c and 1 byte in c++;
@@ -288,10 +282,8 @@ static member function dont have an implicit "this " pointer as the first parame
 Advantages of static member function :
 1.the static function can be used to count the no of instances of a class and can be returned the value 
 of static variable using static member function .
-2.the static function can be called without creating the objecti.e class name :: function name;
+2.the static function can be called without creating the object i.e class name :: function name;
 this is useful to define the constructors in private sections.
-ihi
-
 
 
 member function :
@@ -321,7 +313,6 @@ in contructor there is no return tupe.vi.e like void , int ,char *
 No function name .
 
 
-
 Class A {
 int x,y;
 public :
@@ -334,7 +325,6 @@ main ()
 A obj;
 }
 }  
-
 
 constructors are used to initialize the class members.
 whenever obj is created out of class then constructor must be in public mode.
@@ -365,7 +355,7 @@ be initialized with different value at the time of creation , so C++ allow a pas
 **4 Default member function of the class:
 
 1.default contructor 
-2.copy condtructor 
+2.copy constructor 
 3.destructor
 4.Assignment operator overloaded function 
 
@@ -489,7 +479,7 @@ const object must be accessed with constant  member function only .
 
 Data security (static function )
  	
-using static functioin we can provide data security .put data and constructor and destructor in private 
+using static function we can provide data security .put data and constructor and destructor in private 
 then put use static function for variable/object creation 
 
 ** operator overloading **
@@ -588,7 +578,7 @@ class/structure are the  non-primitive data types
 
 conversion  from one primitive type to another primitive type no need to typecast i.e it will be automatically converted 
 
-if try same with primitive to no primitive (class) then we will get an error.
+if try same with primitive to non primitive (class) then we will get an error.
 
 class complex c1;
 int x=5;
@@ -624,14 +614,8 @@ int x;
 
 Target[Constructor] = source [Type conversion ]
 
-
-
 when there is no constructor then compiler will create a constructor (default constructor )
-
 if we create the constructor (any type ) then compliler will take that constructor 
-
-
-
 
 Inheritance:
 Car :
@@ -949,6 +933,7 @@ To read a object data from a file
                                 }
                         }
                 }
+
 
 
 
