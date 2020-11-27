@@ -658,7 +658,7 @@ Class b :private A
 }
 
 then B can access the public and protected data members not private data members of A 
-so here both the users in class B cant access the protected and public members of class as it is private within class B
+so here both the users in class B cant access the protected and public members of class A as it is private within class B
 
 
 
@@ -679,9 +679,6 @@ is a relation always implemented as public inheritance.
 
 
 
-
-
-
 Function overiding:
 	it is mechanism of providing same function in both base class and derived class is called as function overriding.
 
@@ -690,7 +687,7 @@ program is written there in c++ folder for this function override
 
 compiler will create an variable for class where atleast one function is virtual function , we can verify this using size of both parent and child class.
 virtual function :
-	virtual function is a function which is present in basa class and may be overrided in derived class and which inform
+	virtual function is a function which is present in base class and may be overrided in derived class and which inform
 to compiler to perform the run time polymorphism.
 
 **Virtual functions must be overrided in a derived class ->false.
@@ -715,7 +712,6 @@ virtual pointer contains the V table address i.e static array address which will
 Method overriding:
 
 class A {
-
 fun () {}
 fun1 () {}
 };
@@ -874,12 +870,6 @@ Streams:
 	fout << "my name is \n Anand ";
 	if u open the file in binary mode then above line will be printed as it is with \n
 	but of u open the file in text mode then Anand will be written in next  line i.e meaning of \n will be considered .
-
-
- 
-       
-
-
 
 	to write a data in file 
 	
