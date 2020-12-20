@@ -18,24 +18,19 @@ class A {
 		}
 		static void modify (A &obj)
 		{
-
-			//		x=15,y=10;
 			z=35;
 			obj.x=15, obj.y=25;
 		}
 
 };
 int A::z=30;
-
 int main ()
 {
 
 	A obj;
 	obj.setdata (1,2);
-	//	setdata (&obj,1,2);
 	cout << "Z " << A::z<<endl;
 	obj.print ();
-	//A::modify (obj);
 	obj.modify (obj);
 	cout << "Z " << A::z<<endl;
 	obj.print ();

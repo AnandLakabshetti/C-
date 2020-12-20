@@ -12,13 +12,13 @@ int main ()
 
 
 	//while (fin>>ch)
-/* make use of fin.eof function also for better underastanding*/
+	/* make use of fin.eof function also for better underastanding*/
 
-	
+
 	while ((ch =fin.get()) != EOF)
 	{
 
-	//	ch =fin.get();
+		//	ch =fin.get();
 		cout << ch ;
 		//cout << "\n"<<endl;
 	}

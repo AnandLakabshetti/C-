@@ -39,7 +39,7 @@ int main ()
 	cout << "size of a \n"<< sizeof a<<endl;
 	cout << "size of b \n"<< sizeof b<<endl;
 	cout << "size of c \n"<< sizeof c<<endl;
-/*
+
 	bptr =&a;
 	bptr->fun();
 	bptr->fun1();
@@ -53,7 +53,7 @@ int main ()
 	bptr =&c;
 	bptr->fun();
 	bptr->fun1();
-*/
+
 	}
 
 

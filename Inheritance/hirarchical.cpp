@@ -14,27 +14,28 @@ class vehicle {
 class fourwheelar:public vehicle
 {
 	public:
-	fourwheelar()
-	{
-		cout << "in constructor 4  wheelar\n";
-	}
+		fourwheelar()
+		{
+			cout << "in constructor 4  wheelar\n";
+		}
 };
-
 class car:public vehicle 
 {
 	//public:
 	/*protected:
-	car ()
-	{
+	  car (car & a)
+	  {
 
-		cout << "in constructor car\n";
-	}
-*/
+	  cout << "in constructor car\n";
+	  }
+	  */
 };
 int main ()
 {
 	car c;
+	car c1=c;//-->c1.car (c);
 	fourwheelar f;
+	car *p=new c;
 }
 
 

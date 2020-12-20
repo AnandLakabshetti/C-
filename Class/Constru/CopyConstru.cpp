@@ -8,6 +8,7 @@ class A {
 	public:
 	A () :x(1),y(2){
 		cout << "in default contructors \n"<<endl;
+			cout << x<<" "<<y<<endl;
 	}
 
 	A (int a, int b):x(a),y(b)
@@ -20,9 +21,8 @@ class A {
 	{
 	/*	x=a,y=b;*/
 		cout <<"in Copy contructor \n"<<endl;	
-	//		cout << x<<" "<<y<<endl;
+			cout << x<<" "<<y<<endl;
 	}
-
 	void print ()
 	{
 		cout << x<<" "<<y<<endl;
@@ -34,10 +34,10 @@ class A {
 
 int main ()
 {
-
 	A a;
-	//A a1(a1);
+	//A a1(a);
 	A a1=a;
+	a1.print ();
 	A a2(11,22);
 	a.print ();
 	a1.print ();

@@ -643,7 +643,7 @@ two users :
 here private and protected member functions/function will be available to both the users but 
 those accessiblity will be depends on their access specifiers .
 
-As private data members are available to both users but not accessble to both the users dorectly.
+As private data members are available to both users but not accessble to both the users directly.
 
 and public data members will be available and accessable to both users directly.
 
@@ -671,13 +671,10 @@ Association between two classes
 
 if there 'is a' relation is there there , then there will be inheritance.
 
-
 Banana(child class) is a fruit(parent class) 
 rectangle(child class) is a quadrilateral (parent class) 
 
 is a relation always implemented as public inheritance.
-
-
 
 Function overiding:
 	it is mechanism of providing same function in both base class and derived class is called as function overriding.

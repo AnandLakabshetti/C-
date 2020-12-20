@@ -17,7 +17,7 @@ abc:
 			z=x/y;
 	}
 	catch(string p)
-//	catch(...)
+		//	catch(...)
 	{
 		cout << "in catch block p="<<p<<endl;
 		cout <<"\n"<<endl;
@@ -25,8 +25,6 @@ abc:
 	}
 	cout <<"z-"<<z<<endl;
 	cout << "\n"<<endl;
-
-
 }
 
 

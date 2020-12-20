@@ -16,10 +16,10 @@ class A {
 
 	A (A &obj)
 	{
-	cout << "explicit copy contructor \n"<< endl;
+		cout << "explicit copy contructor \n"<< endl;
 
-	str = new char [strlen (obj.str)]+1;
-	strcpy (str, obj.str);
+		str = new char [strlen (obj.str)]+1;
+		strcpy (str, obj.str);
 	}
 	void modify ()
 	{
@@ -35,7 +35,6 @@ int main ()
 
 	A obj("vector\n");
 	A obj2=obj;
-
 	obj.modify ();
 	obj.print ();
 	obj2.print ();

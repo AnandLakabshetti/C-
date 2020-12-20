@@ -8,23 +8,19 @@ class base
 	public:
 		void setdata (int x,int y)
 		{
-
 			a=x,b=y;
 		}
 		void print_a ()
 		{
 			cout << "value of a and b \n" << a << "\n"<<b<<endl;
 		}
-
 };
 class derived :public base
 {
-
 	public :
 		int c;
 		void setdata_d (int x)
 		{
-
 			c=x;
 			setdata (1,2);
 		}
@@ -32,18 +28,14 @@ class derived :public base
 		{
 			cout << "value of a and b and c \n" << a << "\n"<< "\nb-" << b <<"\nc-"<< c<<endl;
 		}
-
 };
 int main ()
 {
-
 	base b;
 	b.setdata (11,22);
 	b.print_a ();
 	derived c;
 	c.setdata_d(33);
-
-//	c.a=12;
+	c.setdata(3,3);
 	c.print_b();
-
 }

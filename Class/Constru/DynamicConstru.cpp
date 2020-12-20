@@ -32,9 +32,7 @@ class A {
 int main ()
 {
 	A *ptr =new A;
-	A *ptr =new A;
-	
-
+//	A *ptr =new A;
 	ptr->print ();
 
 	ptr = new A (222,333);

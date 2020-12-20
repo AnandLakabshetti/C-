@@ -14,22 +14,22 @@ class vehicle {
 class fourwheelar
 {
 	public:
-	fourwheelar()
-	{
-		cout << "in constructor 4  wheelar\n";
-	}
+		fourwheelar()
+		{
+			cout << "in constructor 4  wheelar\n";
+		}
 };
 
 class car:public vehicle ,public fourwheelar
 {
 	//public:
 	/*protected:
-	car ()
-	{
+	  car ()
+	  {
 
-		cout << "in constructor car\n";
-	}
-*/
+	  cout << "in constructor car\n";
+	  }
+	  */
 };
 int main ()
 {

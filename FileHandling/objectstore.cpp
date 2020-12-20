@@ -71,6 +71,6 @@ int main ()
 	b.storebook();
 	cout << "BEFORE CALLING THE READ\n"<<endl;
 
-	b.readclassfile();
+//	b.readclassfile();
 
 }

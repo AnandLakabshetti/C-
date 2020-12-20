@@ -34,27 +34,23 @@ class B :public A{
 		}
 
 };
-
 int main ()
 {
 	A a,*bptr;
 	B b;
 	cout << "size of a \n"<< sizeof a<<endl;
 	cout << "size of b \n"<< sizeof b<<endl;
-
 	bptr =&a;
 	bptr->fun(); //LB//A
 	//bptr->fun1(5); //LB//A error
 	bptr->fun1(); //LB//A
 	bptr->fun2(); //EB//A
 
-
 	bptr =&b;
 	bptr->fun();//LB //B
 	bptr->fun1();//LB// A
 	//bptr->fun1(5);//EB //A --> in A we dont have function with arguments
 	bptr->fun2();//EB  //A 
-
 }
 
 

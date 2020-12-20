@@ -2,7 +2,7 @@
 using namespace std;
 
 	template <class X ,class Y> 
-X large (X a, Y b)
+Y large (X a, Y b)
 {
 	if (a>b)
 		return a;
